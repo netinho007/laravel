@@ -14,10 +14,10 @@
               <a class="nav-link" href="{{route('view-registrar')}}">Registre-se</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('view-adocao')}}">Sobre nós</a>
+              <a class="nav-link" href="{{route('view-adocao')}}">Adote</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('view-cadastro-animal')}}">Contate-nos</a>
+              <a class="nav-link" href="{{route('view-cadastro-animal')}}">Cadastrar animal</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
