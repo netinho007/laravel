@@ -1,0 +1,75 @@
+body {
+    background-color: #F2F2F2; /* Cor de fundo principal */
+    font-family: Arial, sans-serif;
+  }
+
+  .navbar {
+    background-color: #044040; /* Cor da navbar */
+  }
+
+  .navbar-brand, .nav-link, .navbar-toggler-icon {
+    color: #F2F2F2 !important;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #D92525 !important; /* Cor de destaque para links */
+  }
+
+  .btn-custom {
+    background-color: #D92525;
+    color: white;
+    border: none;
+  }
+
+  .btn-custom:hover {
+    background-color: #8C1F28;
+  }
+
+  .hero-section {
+    background-color: #591C21;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    background-color: #F2F2F2;
+  }
+
+  .card-title {
+    color: #044040;
+  }
+
+  .card-text {
+    color: #591C21;
+  }
+
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que o footer fique sobre o conteúdo */
+    }
+
+    body {
+    padding-bottom: 80px; /* Adiciona um espaço inferior para evitar que o conteúdo sobreponha o footer fixo */
+    }
