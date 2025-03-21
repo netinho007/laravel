@@ -13,10 +13,10 @@ use App\Http\Middleware\LogAcessoMiddleware;
 |
 */
 
-Route::get('/', [App\Http\Controllers\Principal::class, 'principal']);
-Route::get('/registrar', [App\Http\Controllers\Registrar::class, 'registrar']);
-Route::get('/adocao', [App\Http\Controllers\Adocao::class, 'adocao']);
-Route::get('/cadastrar-animal', [App\Http\Controllers\CadastrarAnimal::class, 'cadastrarAnimal']);
+Route::get('/', [App\Http\Controllers\Principal::class, 'principal'])->name('view-inicio');
+Route::get('/registrar', [App\Http\Controllers\Registrar::class, 'registrar'])->name('view-registrar');
+Route::get('/adocao', [App\Http\Controllers\Adocao::class, 'adocao'])->name('view-adocao');
+Route::get('/cadastrar-animal', [App\Http\Controllers\CadastrarAnimal::class, 'cadastrarAnimal'])->name('view-cadastro-animal');
 
 
 

@@ -1,13 +1,51 @@
-<!doctype html>
-<html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Resgistre-se</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1>Tela de registrar os caba</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
-</html>
+@extends('_partials.body')
+
+@section('conteudo')
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <!-- Cabeçalho com cor personalizada -->
+                <div class="card-header text-center" style="background-color: #8C1F28; color: #F2F2F2;">
+                    <h3>Cadastro de Usuário</h3>
+                </div>
+                <div class="card-body" style="background-color: #F2F2F2;">
+                    <!-- Formulário de cadastro -->
+                    <form method="POST">
+                        @csrf
+                        
+                        <!-- Nome -->
+                        <div class="mb-3">
+                            <label for="name" class="form-label" style="color: #591C21;">Nome</label>
+                            <input type="text" class="form-control" id="name" name="name" required style="border-color: #591C21;">
+                        </div>
+
+                        <!-- E-mail -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label" style="color: #591C21;">E-mail</label>
+                            <input type="email" class="form-control" id="email" name="email" required style="border-color: #591C21;">
+                        </div>
+
+                        <!-- Senha -->
+                        <div class="mb-3">
+                            <label for="password" class="form-label" style="color: #591C21;">Senha</label>
+                            <input type="password" class="form-control" id="password" name="password" required style="border-color: #591C21;">
+                        </div>
+
+                        <!-- Confirmar Senha -->
+                        <div class="mb-3">
+                            <label for="password_confirmation" class="form-label" style="color: #591C21;">Confirmar Senha</label>
+                            <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" required style="border-color: #591C21;">
+                        </div>
+
+                        <!-- Botão de Cadastro -->
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn" style="background-color: #D92525; color: white;">Cadastrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

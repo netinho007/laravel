@@ -8,16 +8,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">Início</a>
+              <a class="nav-link active" aria-current="page" href="{{route('view-inicio')}}">Início</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/registrar">Registre-se</a>
+              <a class="nav-link" href="{{route('view-registrar')}}">Registre-se</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sobre nós</a>
+              <a class="nav-link" href="{{route('view-adocao')}}">Sobre nós</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contate-nos</a>
+              <a class="nav-link" href="{{route('view-cadastro-animal')}}">Contate-nos</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
