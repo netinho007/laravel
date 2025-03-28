@@ -11,13 +11,13 @@
                 </div>
                 <div class="card-body" style="background-color: #F2F2F2;">
                     <!-- Formulário de cadastro -->
-                    <form method="POST">
+                    <form  action={{ route('criar-conta') }} method="POST" >
                         @csrf
                         
                         <!-- Nome -->
                         <div class="mb-3">
-                            <label for="name" class="form-label" style="color: #591C21;">Nome</label>
-                            <input type="text" class="form-control" id="name" name="name" required style="border-color: #591C21;">
+                            <label for="nome_completo" class="form-label" style="color: #591C21;">Nome</label>
+                            <input type="text" class="form-control" id="name" name="nome_completo" required style="border-color: #591C21;">
                         </div>
 
                         <!-- E-mail -->
@@ -29,13 +29,13 @@
                         <!-- Senha -->
                         <div class="mb-3">
                             <label for="password" class="form-label" style="color: #591C21;">Senha</label>
-                            <input type="password" class="form-control" id="password" name="password" required style="border-color: #591C21;">
+                            <input type="senha" class="form-control" id="senha" name="senha" required style="border-color: #591C21;">
                         </div>
 
                         <!-- Confirmar Senha -->
                         <div class="mb-3">
-                            <label for="password_confirmation" class="form-label" style="color: #591C21;">Confirmar Senha</label>
-                            <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" required style="border-color: #591C21;">
+                            <label for="confirmar_senha" class="form-label" style="color: #591C21;">Confirmar Senha</label>
+                            <input type="password" class="form-control" id="password_confirmation" name="confirmar_senha" required style="border-color: #591C21;">
                         </div>
 
                         <!-- Botão de Cadastro -->
