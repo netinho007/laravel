@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class Principal extends Controller
 {
     function principal(){
-        echo 'pagina principal';
+        echo 'teste de laravel';
     }
 
     function teste(){
