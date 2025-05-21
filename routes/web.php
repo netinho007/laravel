@@ -14,9 +14,8 @@ use App\Http\Middleware\LogAcessoMiddleware;
 */
 
 Route::get('/', [App\Http\Controllers\Principal::class, 'principal']);
-Route::get('/teste', [App\Http\Controllers\Principal::class, 'teste']);
-Route::get('/conectar', [App\Http\Controllers\Usuario::class, 'conectar']);
-Route::get('/desconectar', [App\Http\Controllers\Usuario::class, 'desconectar']);
 
+route::get('cliente/add', [App\Http\Controllers\clienteController::class, 'add'])->name('add-cliente');
+route::post('cliente/add', [App\Http\Controllers\clienteController::class, 'store'])->name('store-cliente');
 
 
