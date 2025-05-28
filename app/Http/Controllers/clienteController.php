@@ -16,4 +16,14 @@ class clienteController extends Controller
         $cliente ->create($dados->all());
      
     }
+
+    function list(){
+        $clientes = ClienteModel::all();
+        return view('list-cliente',['clientes' => $clientes]);
+    }
+
+    function remove($id){
+        clienteModel::destroy($id);
+        return redirect()->route('list-cliente');
+    }
 }
