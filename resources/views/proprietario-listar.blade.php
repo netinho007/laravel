@@ -3,7 +3,7 @@
         outline: 1px solid #a3a3a3;
     }
 </style>
-
+@foreach ($proprietario as $proprietario)
 <table>
     <thead>
         <tr>
@@ -17,14 +17,14 @@
     </thead>
     <tbody>
             <tr>
-                <td>id: 0</td>
-                <td>nome: Wolksvagem</td>
-                <td>cpf: Fusca</td>
-                <td>telefone: 1945</td>
-                <td>email: ABC-1234</td>
+                <td>{{$proprietario->id}}</td>
+                <td>{{$proprietario->nome}}</td>
+                <td>{{$proprietario->cpf}}</td>
+                <td>{{$proprietario->telefone}}</td>
+                <td>{{$proprietario->email}}</td>
                 <td>
-					<a href="/veiculo/remove/0">Excluir</a>
-                    <a href="/veiculo/update/0">Atualizar</a>
+					<a href="/proprietario/remover/{{ $proprietario->id }}">Excluir</a>
+                    <a href="{{ route('proprietario-edit', $proprietario->id) }}">Atualizar</a>
                 </td>
             </tr>
         @endforeach

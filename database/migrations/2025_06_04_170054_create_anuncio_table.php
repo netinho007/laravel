@@ -13,13 +13,20 @@ return new class extends Migration
     {
         Schema::create('anuncio', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('proprietario_id'); // campo de chave estrangeira
+            $table->unsignedBigInteger('veiculo_id'); // campo de chave estrangeira
+            $table->string('titulo');
+            $table->string('descricao');
+            $table->decimal('preco', 8, 2);
+            $table->timestamp('data_publicacao')->nullable();
             $table->timestamps();
-            $table->string('titulo', 255);
-            $table->string('descricao', 255);
-            $table->decimal('preco', 0,2);
-            $table->timestamps('data_publicacao', 255);
 
+                        // constraint
+        $table->foreign('proprietatio_id')->references('id')->on('proprietario');
+        $table->foreign('veiculo_id')->references('id')->on('veiculo');
+        $table->unique('veiculo_id'); // garante relacionamento um para um
         });
+        
     }
 
     /**

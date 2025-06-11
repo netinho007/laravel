@@ -4,6 +4,7 @@
     }
 </style>
 
+@foreach ($veiculo as $veiculo)
 <table>
     <thead>
         <tr>
@@ -18,15 +19,15 @@
     </thead>
     <tbody>
             <tr>
-                <td>id: 0</td>
-                <td>Marca: Wolksvagem</td>
-                <td>Modelo: Fusca</td>
-                <td>Ano: 1945</td>
-                <td>Placa: ABC-1234</td>
-                <td>Cor: Rosa</td>
+                <td>{{$veiculo->id}}</td>
+                <td>{{$veiculo->marca}}</td>
+                <td>{{$veiculo->modelo}}</td>
+                <td>{{$veiculo->ano}}</td>
+                <td>{{$veiculo->placa}}</td>
+                <td>{{$veiculo->cor}}</td>
                 <td>
-					<a href="/veiculo/remove/0">Excluir</a>
-                    <a href="/veiculo/update/0">Atualizar</a>
+					<a href="/veiculo/remover/{{ $veiculo->id }}">Excluir</a>
+                    <a href="{{ route('veiculo-edit', $veiculo->id) }}">Atualizar</a>
                 </td>
             </tr>
         @endforeach
