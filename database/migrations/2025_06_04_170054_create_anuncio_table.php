@@ -10,24 +10,22 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    {
-        Schema::create('anuncio', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('proprietario_id'); // campo de chave estrangeira
-            $table->unsignedBigInteger('veiculo_id'); // campo de chave estrangeira
-            $table->string('titulo');
-            $table->string('descricao');
-            $table->decimal('preco', 8, 2);
-            $table->timestamp('data_publicacao')->nullable();
-            $table->timestamps();
+{
+    Schema::create('anuncio', function (Blueprint $table) {
+        $table->id();
+        $table->string('titulo');
+        $table->string('descricao');
+        $table->decimal('preco', 8, 2);
+        $table->timestamp('data_publicacao')->nullable();
 
-                        // constraint
-        $table->foreign('proprietatio_id')->references('id')->on('proprietario');
-        $table->foreign('veiculo_id')->references('id')->on('veiculo');
-        $table->unique('veiculo_id'); // garante relacionamento um para um
-        });
-        
-    }
+        $table->unsignedBigInteger('veiculo_id');
+
+        $table->foreign('veiculo_id')->references('id')->on('veiculo')->onDelete('cascade');
+
+        $table->timestamps();
+    });
+}
+
 
     /**
      * Reverse the migrations.
